@@ -17,7 +17,6 @@ title: Vue d'ensemble du projet
     **Auteur(s)**: Ryan Sari <!-- ajouter le matricule -->  
     **Thème(s)**: Développement backend, qualité du code, sécurité, base de données  
     **Superviseur(s)**: Louis-Edouard Lafontant (DIRO, Université de Montréal)  
-    **Collaborateur(s):** <!-- Nom de(s) collaborateur(s) et partenaire(s) -->  
 
 ## Description du projet
 
