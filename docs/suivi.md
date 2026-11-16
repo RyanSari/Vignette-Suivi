@@ -74,12 +74,14 @@ Cette page documente l’évolution du projet Vignette semaine par semaine.
 ## Semaine 4 (20 – 26 novembre)
 
 ### Objectifs de la période
+- Terminer le modèle de données
 - Gérer les vignettes SVG côté backend
 - Mettre en place le site de suivi du projet
 
 ### Travail réalisé
 
 !!! abstract "Avancement"
+    - [ ] Modèle de données ⏳ en cours (reporté de la semaine 3)
     - [ ] Nouveau contrôleur vignette pour le SVG, avec stockage en base de données ⏳ en cours
     - [ ] Nouveau contrôleur pour enregistrer la vignette ⏳ en cours
     - [ ] Site de suivi du projet (à partir du [template IFT3150](https://github.com/udem-diro/template-projet)) ⏳ en cours

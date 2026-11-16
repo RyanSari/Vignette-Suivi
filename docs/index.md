@@ -14,7 +14,7 @@ title: Vue d'ensemble du projet
 
 !!! info "Informations générales"
     **Session**: Automne 2026  
-    **Auteur(s)**: Ryan Sari <!-- ajouter le matricule -->  
+    **Auteur(s)**: Ryan Sari 20266065 
     **Thème(s)**: Développement backend, qualité du code, sécurité, base de données  
     **Superviseur(s)**: Louis-Edouard Lafontant (DIRO, Université de Montréal)  
 
@@ -32,7 +32,7 @@ Un audit du backend (réalisé en semaine 1) a identifié trois familles de prob
 
 - **Doublons de données** : vérifications dupliquées et sensibles à la casse (usernames, titres), invitations impossibles à renvoyer, conditions de concurrence sur les likes, l'ordre des médias, les liens d'invitation et les notifications.
 - **Code et logique dupliqués** : plusieurs gestionnaires d'exceptions, quatre mécanismes de contrôle des droits, méthodes copiées dans plusieurs services, copie de fork incomplète, schéma de BD géré à trois endroits, deux pipelines Glottolog.
-- **Sécurité** : fichiers SVG/XML acceptés (XSS stockée), invitations expirées encore valides, contournement de l'approbation des forks, identifiants admin en dur.
+- **Sécurité** : fichiers SVG/XML acceptés (XSS stockée), invitations expirées encore valides, contournement de l'approbation des forks.
 
 Ces défauts rendent le système difficile à maintenir et exposent des données et des utilisateurs.
 
@@ -64,6 +64,6 @@ Démarche en trois temps : **audit** (documenter les problèmes), **correction**
 |---------------------------------------------|---------------------|--------------------------------|-------------|
 | Prise en main et audit du backend           | 30 oct – 5 nov      | Document de problèmes trouvés  | ✅ Terminé  |
 | Correction des doublons et refactoring      | 6 – 12 nov          | Code corrigé (sections 1.1, 1.2) | ✅ Terminé  |
-| Sécurité, schéma de BD, utils, étude Supabase | 13 – 19 nov       | Code corrigé (section 1.3, BD) | ✅ Terminé  |
+| Sécurité, schéma de BD, utils, priority, étude Supabase | 13 – 19 nov       | Code corrigé (section 1.3, BD) | ✅ Terminé  |
 | Modèle de données et priorités             | 13 nov –            | Modèle de données, priority    | 🔄 En cours |
 | Présentation + Rapport                      | <!-- dates -->      | Présentation + Rapport         | ⏳ À venir  |

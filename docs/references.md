@@ -1,5 +1,5 @@
 ---
-title: Travail réalisé
+title: Références
 ---
 
 <style>
@@ -12,79 +12,77 @@ title: Travail réalisé
 
 # Références
 
-> :bulb: Cette page rassemble les **principales sources et ressources utilisées dans le cadre du projet**.  
-> 
-> Elle permet également de préciser **comment ces ressources ont contribué au travail réalisé**.
-
+Cette page rassemble les principales sources et ressources utilisées dans le cadre du projet, et précise comment elles ont contribué au travail réalisé.
 
 ## Références utilisées
 
-> Selon la nature du projet, vous pouvez notamment référencer :
->
-> * articles scientifiques ou techniques ;
-> * livres et ouvrages de référence ;
-> * documentation officielle ;
-> * normes et spécifications ;
-> * bibliothèques, frameworks et outils importants ;
-> * jeux de données et API ;
-> * projets ou solutions existantes étudiées ;
-> * rapports, études ou publications institutionnelles ;
-> * ressources Web pertinentes.
->
-> Il n'est pas nécessaire de répertorier chaque page consultée. Privilégiez les références qui ont **réellement soutenu, orienté ou influencé votre travail**.
+### Documentation technique
 
-### Présentation des références
+**Spring Framework.** *Reference Documentation* (gestion des exceptions).
+https://docs.spring.io/spring-framework/reference/
 
-> Pour chaque référence importante, fournissez :
->
-> * les informations permettant d'identifier et de retrouver la source ;
-> * une courte justification de **1 à 2 phrases** expliquant son rôle dans le projet.
->
-> La justification peut notamment indiquer si la référence a servi à :
->
-> * comprendre le problème ;
-> * comparer des approches ;
-> * orienter un choix technique ;
-> * concevoir ou implémenter une solution ;
-> * définir une méthode d'évaluation ;
-> * interpréter des résultats.
+Utilisée pour comprendre le fonctionnement de l'aspect `@OwnerOrAdminOperation`.
 
-### Exemple
+**Spring Security.** *Reference Documentation*.
+https://docs.spring.io/spring-security/reference/
 
-> **Mozilla Developer Network.** *Web APIs*.
-> https://developer.mozilla.org/
->
-> Cette documentation a été utilisée comme référence principale pour comprendre le fonctionnement des API Web exploitées dans l'application et valider certains choix d'implémentation.
+Utilisée pour regrouper les 4 mécanismes de contrôle des droits en un seul et corriger les accès (invitations expirées, forks).
 
-> **Nom de l'auteur.** *Titre de l'article*. Nom de la publication, année.
->
-> Cet article a permis de comparer différentes approches au problème étudié et a contribué au choix de la méthode retenue dans le projet.
+**Hibernate ORM.** *Documentation*.
+https://hibernate.org/orm/documentation/
+
+Utilisée pour comprendre le comportement de `ddl-auto` et le verrouillage des entités.
+
+**Flyway.** *Documentation*.
+https://documentation.red-gate.com/flyway
+
+Utilisée pour gérer le schéma de la base de données à un seul endroit, via les migrations.
+
+**PostgreSQL.** *Documentation*.
+https://www.postgresql.org/docs/
+
+Utilisée pour les contraintes d'unicité, les index sur expression (`lower()`) et `INSERT ... ON CONFLICT`, afin de supprimer les doublons sensibles à la casse et les conditions de concurrence.
+
+**Glottolog.** *Base de données de langues*.
+https://glottolog.org
+
+Source des données de langues utilisées par les pipelines d'import de Vignette.
+
+### Sécurité
+
+**MDN Web Docs.** *Content Security Policy (CSP)*.
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+
+Utilisée pour limiter l'exécution de scripts lors de l'affichage des vignettes SVG.
+
+
+### Projet et outils
+
+**Document d'audit interne.** *Backend Vignette : résumé des problèmes trouvés*, semaine 1 du projet.
+
+Point de départ de tout le travail : liste des problèmes de doublons, de code dupliqué et de sécurité à corriger.
+
+**Département d'informatique et de recherche opérationnelle (UdeM).** *Template de site de projet IFT3150*.
+https://github.com/udem-diro/template-projet
+
+Base du présent site de suivi.
+
+**Zensical.** *Documentation*.
+https://zensical.org
+
+Générateur de site statique utilisé pour construire ce site.
 
 ## Utilisation de l'intelligence artificielle
 
-> Documentez les principaux usages de **systèmes d'intelligence artificielle générative ou d'assistants basés sur des modèles de langage** dans le cadre du projet.
->
-> L'objectif n'est pas de retranscrire l'ensemble des conversations ou requêtes effectuées, mais de rendre explicite **le rôle joué par ces outils dans votre démarche**.
+**Claude (Claude Code) — Anthropic**
 
-### Pour chaque outil utilisé
+Utilisé comme assistant de développement sur le backend, principalement pour :
 
-> Indiquez, lorsque pertinent :
->
-> * le nom de l'outil ou du modèle utilisé ;
-> * les principales tâches pour lesquelles il a été employé ;
-> * la manière dont les résultats produits ont été vérifiés, adaptés ou intégrés au projet ;
-> * les limites ou problèmes rencontrés lors de son utilisation.
+- explorer et comprendre le code existant (repérer où une logique est définie et utilisée) ;
+- explication pour corriger des bugs ;
+- rédiger les commentaires du code ;
+- repérer et supprimer le code inutilisé ou écrit en double;
+- comprendre comment fonctionne flyway (causée par une difficulté à comprendre la documentation);
+- aide dans la rédaction de certains tests.
 
-### Exemple
-
-> **ChatGPT — OpenAI**
->
-> Utilisé principalement pour explorer différentes stratégies de traitement des données et générer des pistes d'implémentation. Les propositions obtenues ont été vérifiées à partir de la documentation officielle et adaptées à l'architecture du projet avant leur intégration.
-
-> **GitHub Copilot**
->
-> Utilisé ponctuellement pour assister la rédaction de code répétitif et de tests. Le code généré a été révisé et testé par l'équipe avant d'être conservé dans le projet.
-
-## Références
-
-> Ajoutez vos références ci-dessous en utilisant une présentation cohérente.
+Les modifications proposées ont été relues et testées avant d'être conservées dans le projet.
