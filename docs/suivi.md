@@ -12,45 +12,60 @@ title: Suivi du projet
 
 # Suivi de projet
 
-> :bulb: Cette page documente l’évolution du projet dans le temps.
-> Elle sert à rendre visibles les décisions, ajustements et apprentissages.
-> Les entrées peuvent être hebdomadaires ou bi-hebdomadaires.  
-> N'oubliez pas d’effacer ou de mettre en commentaires les notes (`>`) avant la remise finale.
+Cette page documente l’évolution du projet Vignette semaine par semaine.
 
 ---
 
-## Semaine 1 (12–18 janvier)
+## Semaine 1 (30 octobre – 5 novembre)
 
 ### Objectifs de la période
-- Clarifier la problématique
-- Explorer les solutions existantes
-- Produire un premier prototype conceptuel
+- Prendre en main le projet et vérifier qu'il fonctionne en local
+- Faire un état des lieux du backend
 
 ### Travail réalisé
 
 !!! abstract "Avancement"
-    - [x] Analyse de solutions existantes
-        - Comparaison de trois outils similaires
-    - [x] Prototype basse fidélité (Figma)
-    - [ ] Validation utilisateur
-        - Reportée à la semaine suivante
+    - [x] Exécution du code et vérification du bon fonctionnement sur mon poste
+    - [x] Rédaction du document « Backend Vignette : résumé des problèmes trouvés »
+        - **1.1 Doublons de données** : vérifications username/email et titres en double (sensibles à la casse, dupliquées contrôleur/service), invitations DECLINED/EXPIRED, likes/favoris, `idx` des médias, `maxUses`, notifications, etc.
+        - **1.2 Code et logique dupliqués** : deux gestionnaires d'exceptions, quatre mécanismes de droits, méthodes copiées-collées dans plusieurs services, copie de fork incomplète, schéma de BD géré à 3 endroits, deux pipelines Glottolog, etc.
+        - **1.3 Sécurité et contrôle d'accès** : SVG/XML acceptés (XSS stockée), invitations expirées encore valides, contournement de l'approbation des forks, identifiants admin en dur
 
-### Décisions et ajustements
+---
 
-> À compléter uniquement si des choix structurants ont été faits
-> ou si l’orientation du projet a évolué.
+## Semaine 2 (6 – 12 novembre)
 
-!!! info "Décisions"
-    - Abandon de l’approche X jugée trop complexe
-    - Reformulation de la problématique suite aux premières analyses
+### Objectifs de la période
+- Corriger les problèmes identifiés dans le document de la semaine 1
 
-### Difficultés rencontrées
+### Travail réalisé
 
-> À compléter uniquement si des obstacles ont eu un impact réel
-> sur l’avancement du projet.
+!!! abstract "Avancement"
+    - [x] Correction de tous les problèmes de la section **1.1 (doublons de données)**
+    - [x] Correction de tous les problèmes de la section **1.2 (code et logique dupliqués)**, à l'exception de la gestion du schéma de la BD
+    - [ ] Gestion du schéma de la BD (Flyway / `ddl-auto=update` / `SchemaMaintenance`) : reportée à la semaine 3
+    - [ ] Section **1.3 (sécurité et contrôle d'accès)** : reportée à la semaine 3
 
-!!! warning "Difficultés"
-    - Problème de configuration du plugin Mermaid
-        - Confusion entre `mkdocs-mermaid2-plugin` (pip)
-          et `mermaid2` (nom du plugin)
-        - Résolu après nettoyage et configuration correcte dans `mkdocs.yml`
+---
+
+## Semaine 3 (13 – 19 novembre)
+
+### Objectifs de la période
+- Terminer les points restants du document d'analyse (BD et sécurité)
+- Commencer le modèle de données, la gestion des priorités et les utilitaires
+- Évaluer l'usage de Supabase
+
+### Travail réalisé
+
+!!! abstract "Avancement"
+    - [x] Refactoring
+    - [x] Sécurité (section 1.3 du document)
+    - [x] Base de données (gestion du schéma à un seul endroit)
+    - [ ] Modèle de données ⏳ en cours
+    - [ ] Priority ⏳ en cours
+    - [x] Utils
+    - [x] Étude de l'usage de Supabase
+
+### Prochaines étapes
+- Terminer le modèle de données
+- Terminer la fonctionnalité de priority
