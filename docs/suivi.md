@@ -62,10 +62,24 @@ Cette page documente l’évolution du projet Vignette semaine par semaine.
     - [x] Sécurité (section 1.3 du document)
     - [x] Base de données (gestion du schéma à un seul endroit)
     - [ ] Modèle de données ⏳ en cours
-    - [ ] Priority ⏳ en cours
+    - [x] Priority
     - [x] Utils
     - [x] Étude de l'usage de Supabase
 
 ### Prochaines étapes
 - Terminer le modèle de données
-- Terminer la fonctionnalité de priority
+
+---
+
+## Semaine 4 (20 – 26 novembre)
+
+### Objectifs de la période
+- Gérer les vignettes SVG côté backend
+- Mettre en place le site de suivi du projet
+
+### Travail réalisé
+
+!!! abstract "Avancement"
+    - [ ] Nouveau contrôleur vignette pour le SVG, avec stockage en base de données ⏳ en cours
+    - [ ] Nouveau contrôleur pour enregistrer la vignette ⏳ en cours
+    - [ ] Site de suivi du projet (à partir du [template IFT3150](https://github.com/udem-diro/template-projet)) ⏳ en cours
