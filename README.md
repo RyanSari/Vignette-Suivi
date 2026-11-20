@@ -13,7 +13,6 @@ Il sert à :
 
 * Python **3.11** ou plus récent
 * `pip`
-* Git
 
 ## Installation
 
