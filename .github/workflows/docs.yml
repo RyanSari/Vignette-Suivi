@@ -4,15 +4,19 @@ on:
     branches:
       - master
       - main
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Build and upload in one job, deploy in another: when both steps run in the
+  # same job, deploy-pages can miss the artifact that was just uploaded
+  # (actions/deploy-pages#451).
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/configure-pages@v6
@@ -21,9 +25,16 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install zensical
-      - run: zensical build --clean 
+      - run: zensical build --clean
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/deploy-pages@v5
         id: deployment
