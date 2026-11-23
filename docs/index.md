@@ -46,6 +46,7 @@ Assainir le backend de Vignette, puis préparer son évolution :
 4. Unifier la gestion du schéma de la base de données.
 5. Définir un modèle de données et un système de priorités.
 6. Évaluer l'usage de Supabase.
+7. Enregistrer les vignettes du Vignette Maker en SVG (avec leur dessin) et réintroduire le format SVG de façon sécurisée.
 
 ### Méthodologie
 
@@ -60,10 +61,11 @@ Démarche en trois temps : **audit** (documenter les problèmes), **correction**
 !!! info
     Le suivi complet est disponible dans la page [Suivi de projet](suivi.md).
 
-| Activités                                   | Période             | Livrable                       | Statut      |
-|---------------------------------------------|---------------------|--------------------------------|-------------|
-| Prise en main et audit du backend           | 30 oct – 5 nov      | Document de problèmes trouvés  | ✅ Terminé  |
-| Correction des doublons et refactoring      | 6 – 12 nov          | Code corrigé (sections 1.1, 1.2) | ✅ Terminé  |
-| Sécurité, schéma de BD, utils, priority, étude Supabase | 13 – 19 nov       | Code corrigé (section 1.3, BD) | ✅ Terminé  |
-| Modèle de données et priorités             | 13 nov –            | Modèle de données, priority    | 🔄 En cours |
-| Présentation + Rapport                      | <!-- dates -->      | Présentation + Rapport         | ⏳ À venir  |
+| Semaine | Période | Activités | Livrable | Statut |
+|---------|---------|-----------|----------|--------|
+| 1 | 30 oct – 5 nov | Prise en main du projet et audit du backend | Document « Backend Vignette : résumé des problèmes trouvés » | ✅ Terminé |
+| 2 | 6 – 12 nov | Correction des doublons de données et du code dupliqué | Code corrigé (sections 1.1 et 1.2) | ✅ Terminé |
+| 3 | 13 – 19 nov | Schéma de BD unifié, sécurité, refactoring, priority, utils, étude Supabase | Code corrigé (section 1.3 et BD) | ✅ Terminé |
+| 4 | 20 – 26 nov | Organisation du code, baseline SQL réécrite, retour du SVG sécurisé, contrôleur vignette SVG, téléchargement SVG/ZIP, suppression par l'admin, documentation, tests, site de suivi | Document « Backend Vignette : travail réalisé », site de suivi | 🔄 En cours |
+| 3 – 4 | 13 nov – | Modèle de données (DTO) | Modèle de données | 🔄 En cours |
+| — | <!-- dates --> | Présentation + Rapport | Présentation + Rapport | ⏳ À venir |
